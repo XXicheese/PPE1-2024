@@ -1,4 +1,6 @@
+Ligne 1
 #Commandes utilisées pour répondre à chaque question
 - git add
 - mkdir
 # Séance 3
+Ligne 2
