@@ -1,3 +1,4 @@
+Ligne erronée 1
 # Journal de bord du projet encadré
 ## Séance 1&2
 - Création de l'espace git avec dépot local de clone, apprentissage des commandes Git tels que git clone, vim...etc.
@@ -6,3 +7,4 @@
 - git push pour synchroniser
 - git pull pour la mise à jour du dépot local
 # Séance 3
+Ligne erronée 2
