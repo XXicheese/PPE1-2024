@@ -8,3 +8,4 @@ Ligne erronée 1
 - git pull pour la mise à jour du dépot local
 # Séance 3
 Ligne erronée 2
+Ligne correcte ajoutée.
