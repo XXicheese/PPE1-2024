@@ -5,3 +5,4 @@
 - git commid -m commiter les modifications localement
 - git push pour synchroniser
 - git pull pour la mise à jour du dépot local
+# Séance 3
