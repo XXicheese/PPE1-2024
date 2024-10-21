@@ -1,0 +1,5 @@
+Paris:
+0
+
+Je vois pas pourquoi mais c'est mal compter, j'éssaye de rattraper les cours manquant en faisant les exercices chez moi...
+grep '2018:' *.ann | grep 'Location' | wc -l>> locations.txt
