@@ -1,1 +1,0 @@
-grep '2018' *.ann | grep 'Location' | cut -f 2 | sort | uniq -c | sort -nr | head -n 15 > Exercices/classement_2018.txt
