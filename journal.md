@@ -3,7 +3,8 @@
 
 ## Séance 1&2
 Création de l'espace git avec dépot local de clone, apprentissage des commandes Git tels que git clone, vim...etc.Inscription tardive donc j'ai râté les trois premières séances, perdue dans les cours et j'essaye de rattrapée un peu. Mon Git est en désordre, en espérant qu'il sera propre après les vacances de fin octobre.  
-###Commandes bases
+
+### Commandes bases
 - cd changer de répertoire
 - sudo permission
 - pwd afficher le chemin absolu du répertoire courant
@@ -25,12 +26,12 @@ Création de l'espace git avec dépot local de clone, apprentissage des commande
 - git clone fichier clone dépot local et distanciel
 
 ## Séance 3
-###Envoyer des modifications local/à distance
+### Envoyer des modifications local/à distance
 - git add ajouter un fichier à l’index
 - git commit -m “ “ faire un commit avec un message
 - git push envoie les commits locaux vers le dépôt distant
 - git pull récupère et fusionne les modifications depuis le dépôt distant
-###Modification/suppressions des commits précédents
+### Modification/suppressions des commits précédents
 - git status vérifier l’état du dépôt
 - git log affiche l’historique des commits avec des informations détaillés
 - git reset –soft/hard id_commit annuler les commits, hard pour supprimer les modifications
@@ -59,12 +60,12 @@ Création de l'espace git avec dépot local de clone, apprentissage des commande
 	-u affiche uniquement les lignes uniques
 
 ## Séance 5
-###Commande lynx
+### Commande lynx
 - dump afficher le contenu du texte brut du site Web
 - nolist sans liste
 - listonly afficher la liste du site Web
 - source afficher la source
-###Commande curl
+### Commande curl
 - i pour voir le contenu
 - o sauvegarder la sortie dans un fichier
 - d envoyer des données avec la méthode POST
@@ -75,7 +76,7 @@ Création de l'espace git avec dépot local de clone, apprentissage des commande
 - v vérifier une URL avec SSL/TLS
 
 ## Séance 6
-###Exercices
+### Exercices
 1/Pourquoi ne pas utiliser cat ?  
 cat envoie tout le contenu d’un fichier à la sortie standard d’un coup, mais while read -r line permet de lire chaque ligne du fichier individuellement. Ça évite les effets indésirables d’expansion ou de transformation des espaces et des tabulations, si est plus simple pour la manipulation ligne par ligne.  
 2/Comment transformer "urls/fr.txt" en paramètre du script ?  
@@ -83,6 +84,5 @@ Je peux remplacer “urls/fr.txt” par “$1”, même technique utilisée sur 
 3/Comment afficher le numéro de ligne avant chaque URL (sur la même ligne) ?  
 Ajouter \t pour les tabulations, juste après l’URL comme echo -e "${line_number}\t${line}”  
 
-xxicheese@Elpis:~/Documents/30PPE/PPE1-2024/miniprojet$ chmod +x programmes/miniprojet.sh  
-xxicheese@Elpis:~/Documents/30PPE/PPE1-2024/miniprojet$ ./programmes/miniprojet.sh urls/fr.txt
-
+chmod +x miniprojet.sh  
+./miniprojet.sh ../urls/fr.txt  
