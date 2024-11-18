@@ -16,12 +16,44 @@ valid_url=()
 invalid_url=()
 num=1
 
-# Définir le fichier de sortie et créer le dossier cible
-output_file="../tableaux/tableau-fr.tsv"
+# Changement de sortie en HTML
+output_file="../tableaux/tableau-fr.html"
 mkdir -p "../tableaux"
 
-# Écrire l'en-tête du fichier TSV
-echo -e "Numéro\tURL\tCode HTTP\tEncodage\tNombre de mots" > "$output_file"
+# En-tête HTML
+echo "<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Tableau des URLs</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tableau des données récupérées</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Numéro</th>
+                <th>URL</th>
+                <th>Code HTTP</th>
+                <th>Encodage</th>
+                <th>Nombre de mots</th>
+            </tr>
+        </thead>
+        <tbody>" > "$output_file"
 
 # Lire le fichier ligne par ligne
 while IFS= read -r line; do
@@ -43,25 +75,31 @@ for url in "${valid_url[@]}"; do
 
     # Vérifier si le code HTTP est une erreur (4xx ou 5xx)
     if [[ "$http_code" =~ ^[45][0-9]{2}$ ]]; then
-        echo -e "HTTP erreur: $http_code pour $url\nVous pouvez le corriger ou réessayer une fois.\n"
+        echo "HTTP erreur : $http_code pour $url. Vous pouvez le corriger ou réessayer plus tard."
     else
-        # Écrire les informations avec des tabulations dans le fichier TSV
-        echo -e "${num}\t${url}\t${http_code}\t${encoding:-N/A}\t${word_count}" >> "$output_file"
-        echo -e "${num}\t${url}\t${http_code}\t${encoding:-N/A}\t${word_count}"  # Affiche aussi dans le terminal
+        # Ajouter une ligne au tableau HTML
+        echo "            <tr>
+                <td>${num}</td>
+                <td><a href=\"$url\">$url</a></td>
+                <td>${http_code}</td>
+                <td>${encoding:-N/A}</td>
+                <td>${word_count}</td>
+            </tr>" >> "$output_file"
         ((num++))
     fi
-
-    # Vérifier si l'encodage est vide
-    if [ -z "$encoding" ]; then
-        echo "Cet URL: $url n'a pas d'encodage spécifié.\n"
-    fi
 done
+
+# Fermer le tableau HTML
+echo "        </tbody>
+    </table>
+</body>
+</html>" >> "$output_file"
 
 # Afficher les URLs invalides
 if [ ${#invalid_url[@]} -gt 0 ]; then
     echo -e "\nURLs invalides :"
     for url in "${invalid_url[@]}"; do
-        echo "Ce URL n'est pas correct: $url"
+        echo "Ce URL n'est pas correct : $url"
     done
 fi
 
