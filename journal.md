@@ -86,3 +86,9 @@ Ajouter \t pour les tabulations, juste après l’URL comme echo -e "${line_numb
 
 chmod +x miniprojet.sh  
 ./miniprojet.sh ../urls/fr.txt  
+
+## Séance 7  
+### Commande HTML  
+Difficile à expliquer les commandes HTML dans journal.md.  
+Utilisation du <style> pour ajouter des bordures et le fond de couleur du cellule.  
+Après avoir modifier mon code je connaîs l'importance des commentaires: POUR NE PAS ME PERDRE DANS LE FUTUR.  
