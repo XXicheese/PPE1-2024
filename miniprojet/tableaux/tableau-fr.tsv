@@ -1,9 +1,0 @@
-Numéro	URL	Code HTTP	Encodage	Nombre de mots
-1	https://fr.wikipedia.org/wiki/Robot	200	UTF-8	15727
-2	https://fr.wikipedia.org/wiki/Robot_de_cuisine	200	UTF-8	3909
-3	https://fr.wikipedia.org/wiki/Bot_informatique	200	UTF-8	5815
-4	https://fr.wikipedia.org/wiki/Atlas_(robot)	200	UTF-8	3754
-5	https://roboty.magistry.fr	200	N/A	166
-6	https://fr.wiktionary.org/wiki/robot	200	UTF-8	12259
-7	https://fr.wikipedia.org/wiki/Protocole_d%27exclusion_des_robots	200	UTF-8	3978
-8	https://fr.wikipedia.org/wiki/Robotique	200	UTF-8	21820
