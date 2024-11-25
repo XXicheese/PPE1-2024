@@ -92,3 +92,6 @@ chmod +x miniprojet.sh
 Difficile à expliquer les commandes HTML dans journal.md.  
 Utilisation du <style> pour ajouter des bordures et le fond de couleur du cellule.  
 Après avoir modifier mon code je connaîs l'importance des commentaires: POUR NE PAS ME PERDRE DANS LE FUTUR.  
+
+## Séance 8
+https://xxicheese.github.io/PPE1-2024/
